@@ -17,7 +17,7 @@ app.use(express.json())
 app.use("/api/products",routerProducts)
 app.use("/api/categories",routerCategories)
 
-//cambio
+
 
 //Apertura de Servidor
 app.listen(config.port,()=>{console.log("listen")})
