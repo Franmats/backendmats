@@ -8,6 +8,8 @@ export default class ProductsRepository {
     getProducts = async () => { return await this.dao.getProducts()}
 
     getProductsByCategory = async (data1) => { return await this.dao.getProductsByCategory(data1)}
+    
+    getProductsByUser = async (resto1) => { return await this.dao.getProductsByUser(resto1)}
 
     updateStatusProduct = async (id,estado) => { return await this.dao.updateStatusProduct(id,estado)}
 

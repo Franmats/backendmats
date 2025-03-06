@@ -11,6 +11,8 @@ export default class Product {
 
     getProductsByCategory = async (data1) => { return await ProductModel.find({$and: [{ subCategory: data1.producto}, {idCategoria: data1.restaurante} ]})}
 
+    getProductsByUser = async (resto1) => { return await ProductModel.find({idCategoria:resto1})}
+
     createProduct = async (product) =>  { return await  ProductModel.create(product)}
 
     updateStockProduct = async (id,number) => {return await ProductModel.updateOne({_id:id},{$set:{stock:number}})}

@@ -6,16 +6,17 @@ export default class CategoriesRepository {
 
     getCategories = async () => { return await this.dao.getCategories()}
 
-    getCategoriesByName = async (nombre) => { return await this.dao.getCategoriesByName(nombre)}
+    getCategorieById = async (id) => { return await this.dao.getCategorieById(id)}
 
-    createProduct = async (product) =>  {
+    createCategorie = async (categorie) =>  {
 
-        const result = new ProductsDTO(product)
 
-        return await this.dao.createProduct(result)
+        return await this.dao.createCategorie(categorie)
     }
+
+    updateInfoById = async (id, data) => {return await this.dao.updateInfoById(id,data)}
 
     updateStockProduct = async (id,number) => {return await this.dao.updateStockProduct(id,number)}
 
-    deleteProduct = async(id) => { return await this.dao.deleteProduct(id)}
+    deleteCategorie = async(id) => { return await this.dao.deleteCategorie(id)}
 }

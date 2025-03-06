@@ -6,12 +6,12 @@ export default class Category {
 
     getCategoriesByName = async (nombre) => { return await ProductModel.find({resto:nombre})}
 
-    getProductByCategory = async (id) => { return await ProductModel.findById(id)}
+    getCategorieById = async (id) => { return await ProductModel.findById(id)}
 
-    createProduct = async (product) =>  { return await  ProductModel.create(product)}
+    updateInfoById = async (id, data) => {return await ProductModel.findByIdAndUpdate(id, { $set: data }, { new: true })}
 
-    updateStockProduct = async (id,number) => {return await ProductModel.updateOne({_id:id},{$set:{stock:number}})}
+    createCategorie = async (categorie) =>  { return await  ProductModel.create(categorie)}
 
-    deleteProduct = async(id) => { return await ProductModel.deleteOne({_id:id})}
+    deleteCategorie = async(id) => { return await ProductModel.deleteOne({_id:id})}
 
 }
