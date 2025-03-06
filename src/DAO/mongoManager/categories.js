@@ -4,7 +4,7 @@ export default class Category {
 
     getCategories = async () => { return await ProductModel.find()}
 
-    getCategoriesByName = async (nombre) => { return await ProductModel.find({resto:nombre})}
+    getCategoriesByName = async (nom) => { return await ProductModel.find({resto:nom})}
 
     getCategorieById = async (id) => { return await ProductModel.findById(id)}
 

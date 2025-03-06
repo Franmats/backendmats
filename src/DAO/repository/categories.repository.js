@@ -7,6 +7,7 @@ export default class CategoriesRepository {
     getCategories = async () => { return await this.dao.getCategories()}
 
     getCategorieById = async (id) => { return await this.dao.getCategorieById(id)}
+    getCategoriesByName = async (nom) => { return await this.dao.getCategoriesByName(nom)}
 
     createCategorie = async (categorie) =>  {
 

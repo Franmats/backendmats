@@ -25,14 +25,17 @@ export const getCategoriesByName = async (req,res) => {
         }
     
     const bolean2= await restaurantExist(nombre)
+    console.log(bolean2)
         if  (bolean2 == false ) {
             return res.status(400).json({ status: "error", message: "ParamsError" });//
           }
         
         try {
             const result = await categoriesService.getCategoriesByName(nombre)
+            console.log(result)
             res.send({status:"success", payload:result})
         } catch (error) {
+            console.log(error)
             res.send({status:"failed", payload:[]})
         }
         

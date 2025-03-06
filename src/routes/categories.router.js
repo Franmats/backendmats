@@ -6,7 +6,7 @@ const router = Router()
 
 //ADMINISTRADOR DEL SISTEMA
 router.get("/",passportCall("jwt",{ session: false }),authorization( "admin" ),getCategories)
-router.get("/byid/:id",getCategorieById)
+router.get("/byid/:id",passportCall("jwt",{ session: false }),authorization( "admin" ),getCategorieById)
 router.post("/",passportCall("jwt",{ session: false }),authorization( "admin" ),createCategorie)
 router.put("/:id",passportCall("jwt",{ session: false }),authorization( "admin" ),updateInfoById)
 router.delete("/:id",passportCall("jwt",{ session: false }),authorization( "admin" ),deleteCategorie)
