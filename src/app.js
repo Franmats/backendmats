@@ -34,9 +34,9 @@ app.use(session({
 
 
 //Rutas Principales
-app.use("/api/products",routerProducts)
-app.use("/api/categories",routerCategories)
-app.use("/api/user", routerUsers)
+app.use("/products",routerProducts)
+app.use("/categories",routerCategories)
+app.use("/user", routerUsers)
 
 
 
